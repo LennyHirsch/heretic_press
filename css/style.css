@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat-Regular.otf);
+}
+body {
+  font-family: "Montserrat";
+  text-rendering: optimizeLegibility;
+  background: #333;
+  color: #888;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  background: #444;
+  list-style-type: none;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+.navbar .navitem {
+  margin: auto 10px;
+}
+.navbar .navitem .navlink {
+  text-decoration: none;
+  color: #222;
+}
+.navbar .navitem .navlink:hover {
+  color: #888;
+  transition: 0.5s;
+}
+
+.copy-container {
+  margin: 0 10em;
+}
+.copy-container h1 {
+  text-decoration: underline;
+  font-size: 36px;
+}
+.copy-container p {
+  font-size: 24px;
+}
+.copy-container a {
+  transition: 0.5s;
+  color: #888;
+}
+.copy-container a:hover {
+  color: whitesmoke;
+}/*# sourceMappingURL=style.css.map */

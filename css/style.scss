@@ -1,0 +1,64 @@
+// Font Declarations:
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/Montserrat-Regular.otf);
+}
+
+//Colors:
+$lightback: #444;
+$back: #333;
+$darkback: #222;
+$main: #888;
+$link: #0be38f;
+$link-hover: #bb0000;
+
+
+// General
+body {
+    font-family: "Montserrat";
+    text-rendering: optimizeLegibility;
+    background: $back;
+    color: $main;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    background: $lightback;
+    list-style-type: none;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    .navitem {
+        margin: auto 10px;
+        .navlink {
+            text-decoration: none;
+            color: $darkback;
+            &:hover {
+                color: $main;
+                transition: 0.5s; 
+            }
+        }
+    }
+}
+
+.copy-container {
+    margin: 0 10em;
+    h1 {
+        text-decoration: underline;
+        font-size: 36px;
+    }
+    p {
+        font-size: 24px;
+    }
+    a {
+        transition: 0.5s;
+        color: $main;
+        &:hover {
+            color: whitesmoke;
+        }
+    }
+}
