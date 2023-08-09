@@ -4,21 +4,31 @@
   src: url(fonts/Montserrat-Regular.otf);
 }
 
+@font-face {
+    font-family: 'Fraktur';
+    src: url(fonts/BreitkopfFraktur.ttf);
+    // src: url(fonts/ChursaechsischeFraktur.ttf);
+    // src: url(fonts/FetteHaenelFraktur.ttf);
+    // src: url(fonts/GebetbuchFraktur.ttf);
+}
+
 //Colors:
-$lightback: #444;
+$blood: #C4001B;
+$darkblood: #9b0015;
+$highlight: #e15c6e;
+$darkback: #2b2f36;
+$lightback: #4e5768;
 $back: #333;
-$darkback: #222;
-$main: #888;
-$link: #0be38f;
-$link-hover: #bb0000;
+$white: #e5eaf5;
+$offwhite: #c3cad9;
 
 
 // General
 body {
     font-family: "Montserrat";
     text-rendering: optimizeLegibility;
-    background: $back;
-    color: $main;
+    background: $darkback;
+    color: $offwhite;
     margin: 0;
     padding: 0;
 }
@@ -29,18 +39,32 @@ body {
     justify-content: flex-end;
     background: $lightback;
     list-style-type: none;
-    height: 50px;
+    height: 100px;
     margin: 0;
     padding: 0;
+    font-size: 20px;
+    .navlogo {
+        font-family: 'Fraktur';
+        font-size: 80px;
+        margin: auto;
+        color: $white;
+    }
     .navitem {
         margin: auto 10px;
         .navlink {
             text-decoration: none;
             color: $darkback;
             &:hover {
-                color: $main;
+                color: $offwhite;
                 transition: 0.5s; 
             }
+        }
+    }
+    .active {
+        color: $white !important;
+        transition: 0.5s;
+        &:hover {
+            color: $highlight !important;
         }
     }
 }
@@ -48,17 +72,35 @@ body {
 .copy-container {
     margin: 0 10em;
     h1 {
-        text-decoration: underline;
-        font-size: 36px;
+        font-family: 'Fraktur';
+        font-style: normal;
+        // text-decoration: underline;
+        font-size: 64px;
     }
     p {
         font-size: 24px;
     }
     a {
         transition: 0.5s;
-        color: $main;
+        color: $offwhite;
         &:hover {
-            color: whitesmoke;
+            color: $blood;
         }
     }
+}
+
+p::selection {
+    background: $darkblood;
+}
+
+p::-moz-selection {
+    background: $darkblood;
+}
+
+a::selection {
+    background: $darkblood;
+}
+
+a::-moz-selection {
+    background: $darkblood;
 }
